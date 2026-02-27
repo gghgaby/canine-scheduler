@@ -4,7 +4,16 @@
   "files": [],
   "references": [
     {
-      "path": "./apps/site"
+      "path": "./apps/shell"
+    },
+    {
+      "path": "./apps/profiles"
+    },
+    {
+      "path": "./apps/notifications"
+    },
+    {
+      "path": "./apps/scheduling"
     }
   ]
 }

@@ -1,19 +1,31 @@
 /// <reference types='vitest' />
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
+import { federation } from '@module-federation/vite';
 
 export default defineConfig(() => ({
   root: import.meta.dirname,
-  cacheDir: '../../node_modules/.vite/apps/site',
+  cacheDir: '../../node_modules/.vite/apps/scheduling',
   server: {
-    port: 4200,
+    port: 4202,
     host: 'localhost',
+    cors: true
   },
   preview: {
-    port: 4300,
+    port: 4202,
     host: 'localhost',
   },
-  plugins: [react()],
+    plugins: [react(),
+    federation({
+      name:  'scheduling',
+      filename: 'remoteEntry.js',
+      exposes: {
+        './Module': './src/app/app.tsx',
+      },
+      shared: ['react', 'react-dom', 'react-router-dom', '@mantine/core'],
+      dts: false,
+    })
+  ],
   // Uncomment this if you are using workers.
   // worker: {
   //  plugins: [],
@@ -24,18 +36,6 @@ export default defineConfig(() => ({
     reportCompressedSize: true,
     commonjsOptions: {
       transformMixedEsModules: true,
-    },
-  },
-  test: {
-    name: '@canine-scheduler/site',
-    watch: false,
-    globals: true,
-    environment: 'jsdom',
-    include: ['{src,tests}/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
-    reporters: ['default'],
-    coverage: {
-      reportsDirectory: './test-output/vitest/coverage',
-      provider: 'v8' as const,
     },
   },
 }));

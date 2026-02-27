@@ -20,8 +20,8 @@ describe('App', () => {
       </BrowserRouter>,
     );
     expect(
-      getAllByText(new RegExp('Welcome @canine-scheduler/site', 'gi')).length >
-        0,
+      getAllByText(new RegExp('Welcome shell', 'gi')).length >
+      0,
     ).toBeTruthy();
   });
 });

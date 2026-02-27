@@ -2,7 +2,14 @@
   "name": "@canine-scheduler/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "build": "nx build",
+    "lint": "nx lint",
+    "test": "nx test",
+    "shell": "nx serve shell",
+    "dev:full": "nx run-many --target=serve --projects=shell,profiles,scheduling,notifications --parallel",
+    "dev": "npx nx run-many --target=serve --projects=profiles,scheduler,notifications --parallel=3 & sleep 5 && npx nx serve shell"
+  },
   "private": true,
   "dependencies": {
     "@mantine/core": "^8.3.15",
@@ -10,6 +17,7 @@
     "@mantine/form": "^8.3.15",
     "@mantine/hooks": "^8.3.15",
     "@mantine/notifications": "^8.3.15",
+    "@module-federation/runtime": "^2.0.1",
     "@module-federation/vite": "^1.11.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
