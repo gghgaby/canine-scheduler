@@ -1,7 +1,7 @@
 /// <reference types='vitest' />
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
 import { federation } from '@module-federation/vite';
+import react from '@vitejs/plugin-react';
+import { defineConfig } from 'vite';
 
 export default defineConfig(() => ({
   root: import.meta.dirname,
@@ -9,22 +9,23 @@ export default defineConfig(() => ({
   server: {
     port: 4201,
     host: 'localhost',
-     cors: true,
+    cors: true,
   },
   preview: {
     port: 4301,
     host: 'localhost',
   },
-    plugins: [react(),
+  plugins: [
+    react(),
     federation({
-      name:  'profiles',
+      name: 'profiles',
       filename: 'remoteEntry.js',
       exposes: {
         './Module': './src/app/app.tsx',
       },
-      shared: ['react', 'react-dom', 'react-router-dom', '@mantine/core'],
+      shared: ['react', 'react-dom', 'react-router-dom'],
       dts: false,
-    })
+    }),
   ],
   // Uncomment this if you are using workers.
   // worker: {

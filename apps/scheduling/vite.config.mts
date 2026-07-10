@@ -22,7 +22,7 @@ export default defineConfig(() => ({
       exposes: {
         './Module': './src/app/app.tsx',
       },
-      shared: ['react', 'react-dom', 'react-router-dom', '@mantine/core'],
+      shared: ['react', 'react-dom', 'react-router-dom'],
       dts: false,
     })
   ],

@@ -2,6 +2,7 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { federation } from '@module-federation/vite';
+import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig(() => ({
   root: import.meta.dirname,
@@ -16,6 +17,7 @@ export default defineConfig(() => ({
   },
   plugins: [
     react(),
+    tailwindcss(),
     federation({
       name: 'shell',
       remotes: {
@@ -24,7 +26,7 @@ export default defineConfig(() => ({
         notifications: 'http://localhost:4203/remoteEntry.js',
 
       },
-      shared: ['react', 'react-dom', 'react-router-dom', '@mantine/core'],
+      shared: ['react', 'react-dom', 'react-router-dom'],
       dts: false,
     }),
   ],
