@@ -1,0 +1,75 @@
+@import 'tailwindcss';
+
+@theme {
+  --*: initial;
+  /* Teal — clinical trust, "vet" side of the brand */
+  --color-vet-50: #eefbf9;
+  --color-vet-100: #d3f3ee;
+  --color-vet-200: #a8e7dd;
+  --color-vet-300: #75d4c7;
+  --color-vet-400: #45b8ac;
+  --color-vet-500: #2a9d8f;
+  --color-vet-600: #1f7e74;
+  --color-vet-700: #1c655e;
+  --color-vet-800: #1a504c;
+  --color-vet-900: #194340;
+  --color-vet-950: #092625;
+
+  /* Warm tan/brown — fur, paws, the "pet" side of the brand */
+  --color-paw-50: #fbf5ef;
+  --color-paw-100: #f5e6d5;
+  --color-paw-200: #eaccab;
+  --color-paw-300: #ddab79;
+  --color-paw-400: #cf8c52;
+  --color-paw-500: #c1753d;
+  --color-paw-600: #a35d31;
+  --color-paw-700: #82492a;
+  --color-paw-800: #6a3c27;
+  --color-paw-900: #593323;
+  --color-paw-950: #301911;
+
+  /* Playful orange — accents, CTAs, badges */
+  --color-treat-50: #fff6ed;
+  --color-treat-100: #ffead2;
+  --color-treat-200: #ffd2a4;
+  --color-treat-300: #ffb46c;
+  --color-treat-400: #ff9339;
+  --color-treat-500: #f4761a;
+  --color-treat-600: #e05a10;
+  --color-treat-700: #ba4210;
+  --color-treat-800: #943515;
+  --color-treat-900: #782d14;
+  --color-treat-950: #411407;
+
+  /* Semantic colors */
+  --color-success-50: #eef9ee;
+  --color-success-500: #4b9e5a;
+  --color-success-700: #326b3d;
+
+  --color-warning-50: #fef8e8;
+  --color-warning-500: #e0a72a;
+  --color-warning-700: #a1750f;
+
+  --color-danger-50: #fdecec;
+  --color-danger-500: #d9544c;
+  --color-danger-700: #a13330;
+
+  /* Neutrals — warm grey, softer than pure slate */
+  --color-neutral-50: #faf9f7;
+  --color-neutral-100: #f2f0ec;
+  --color-neutral-200: #e3e0da;
+  --color-neutral-300: #cac5bb;
+  --color-neutral-400: #a8a196;
+  --color-neutral-500: #857e73;
+  --color-neutral-600: #67615a;
+  --color-neutral-700: #514c46;
+  --color-neutral-800: #3a3733;
+  --color-neutral-900: #262421;
+  --color-neutral-950: #171513;
+}
+
+:root {
+  .body-wrapper {
+    margin: 3rem 8rem;
+  }
+}

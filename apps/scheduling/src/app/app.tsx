@@ -5,7 +5,8 @@ import NxWelcome from './nx-welcome';
 export function App() {
   return (
     <div>
-      <NxWelcome title="scheduling" />
+      <NxWelcome title="Scheduling" />
+      <h3>Using Teal color</h3>
     </div>
   );
 }

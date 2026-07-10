@@ -1,8 +1,8 @@
 /// <reference types='vitest' />
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
 import { federation } from '@module-federation/vite';
 import tailwindcss from '@tailwindcss/vite';
+import react from '@vitejs/plugin-react';
+import { defineConfig } from 'vite';
 
 export default defineConfig(() => ({
   root: import.meta.dirname,
@@ -24,7 +24,6 @@ export default defineConfig(() => ({
         profiles: 'http://localhost:4201/remoteEntry.js',
         scheduling: 'http://localhost:4202/remoteEntry.js',
         notifications: 'http://localhost:4203/remoteEntry.js',
-
       },
       shared: ['react', 'react-dom', 'react-router-dom'],
       dts: false,
