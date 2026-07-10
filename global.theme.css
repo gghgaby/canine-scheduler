@@ -66,6 +66,12 @@
   --color-neutral-800: #3a3733;
   --color-neutral-900: #262421;
   --color-neutral-950: #171513;
+
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
 }
 
 :root {
